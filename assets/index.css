@@ -1,74 +1,169 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f5f7fa;
 }
-.banner, .footer {
-    background-color: #6fbf73;
+
+/* Banner Section */
+.banner {
+    background-color: #0078d4;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 20px 0;
+    font-size: 1.5em;
     font-weight: bold;
 }
+
+/* Countdown Section */
 .countdown {
-    background-color: #d9534f;
+    background-color: #ff7043;
     color: white;
-    padding: 10px;
     text-align: center;
+    padding: 10px 0;
+    font-size: 1.2em;
     font-weight: bold;
 }
-.tabs {
+
+/* Tab Navigation */
+.tabs, .tabs1 {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    gap: 10px;
 }
+
 .tab-button {
-    background-color: #d5f5d5;
+    background-color: #0078d4;
+    color: white;
     border: none;
     padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    margin: 0 5px;
+    font-size: 1em;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-.tab-button:hover {
-    background-color: #c0eac0;
-}
-/* Các phần CSS khác giữ nguyên */
 
+.tab-button:hover {
+    background-color: #005bb5;
+}
+
+.tab-button.active {
+    background-color: #ff7043;
+}
+
+/* Tab Content Styling */
 .tab-content, .tab-content1 {
     display: none;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    margin: 20px;
-    text-align: center;
+    margin: 0 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.tab-content h2 {
-    color: #6fbf73;
+.tab-content h2, .tab-content1 h2 {
+    color: #0078d4;
 }
+
+/* Featured Guest Section */
 .featured-guest {
-    background-color: #5bc0de;
-    color: white;
-    padding: 20px;
     text-align: center;
-}
-.guest-info {
-    background-color: white;
-    padding: 20px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-}
-.additional-info, .program-info {
-    background-color: #d5f5d5;
-    padding: 20px;
-    text-align: center;
-}
-.footer {
-    background-color: #6fbf73;
-    color: white;
-    padding: 10px;
-    text-align: center;
+    padding: 30px;
+    background-color: #e3f2fd;
+    border-top: 3px solid #0078d4;
 }
 
+.featured-guest .guest-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.guest-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #0078d4;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.guest-info h3 {
+    color: #ff7043;
+    font-size: 1.4em;
+}
+
+.guest-info p {
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Program Information Section */
+.program-info {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f4f8;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0078d4;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Floating Contact Links */
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Hover Effect */
+.contact-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific Colors for Each Icon */
+.contact-icon.zalo {
+    background-color: #0084ff; /* Zalo Blue */
+}
+
+.contact-icon.tiktok {
+    background-color: #000000; /* TikTok Black */
+}
+
+.contact-icon.youtube {
+    background-color: #FF0000; /* YouTube Red */
+}
